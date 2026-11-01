@@ -21,6 +21,31 @@
 </p>
 
 
+## About this fork
+
+I love this application and have been using it for a long time, but never had the
+time to sit down and bring it to the "next level". I want to bring this project back
+to life, and hopefully others will see the value in it, too.
+
+What's new in this fork:
+
+- **AI sorting** with Claude, OpenAI or Gemini: files are sorted by what they are
+  (invoice, contract, tax, …) and who sent them, judged by their content - including
+  scanned PDFs, images and audio/video metadata
+  ([`ai` filter](docs/filters.md#ai))
+- **Folders** are moved as a whole by their name, their content stays together
+- **Duplicates** with the same content (whatever their name) get the Finder tag
+  "Duplicate" ([`copy_of`](docs/filters.md#copy_of),
+  [`mark_duplicate`](docs/actions.md#mark_duplicate))
+- **Undo** of any run with `organize undo`
+- **Watch mode**: `organize watch` sorts new files a few seconds after they arrive,
+  and can run in the background on macOS ([details](docs/watch-and-undo.md))
+- A **macOS menu bar app** showing what was sorted, items to review and duplicates
+  ([macos/](macos/README.md))
+
+See [`examples/downloads.yaml`](examples/downloads.yaml) for a complete config that
+keeps the Downloads folder tidy.
+
 ## v3 is now available
 
 The new version should be *much* faster and fix a lot of bugs. It also comes with
